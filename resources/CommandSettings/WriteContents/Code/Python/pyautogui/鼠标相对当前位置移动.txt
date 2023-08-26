@@ -1,0 +1,1 @@
+pyautogui.moveRel(offset_x, offset_y)

@@ -1,0 +1,19 @@
+// 鉴权服务(配置Identity Server服务器)
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = "Bearer";
+    options.DefaultAuthenticateScheme = "Bearer";
+    options.DefaultChallengeScheme = "Bearer";
+    options.DefaultSignInScheme = "Bearer";
+    options.DefaultForbidScheme = "Bearer";
+}).AddIdentityServerAuthentication(options => // <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.1" />
+{
+    options.Authority = "https://is4server.com";
+    // 即api resource
+    options.ApiName = "my api name";
+    // 即api resource secret
+    options.ApiSecret = "my api secret";
+    options.RequireHttpsMetadata = true;
+    options.EnableCaching = true;
+    options.CacheDuration = TimeSpan.FromMinutes(10);
+});

@@ -1,0 +1,1 @@
+server\\s*=\\s*\\(localdb\\)\\\\\\\\mssqllocaldb;\\s*database=(?<database>\\w+);.+

@@ -1,0 +1,4 @@
+fetch("http://dev.iduo.cc:4500/connect/authorize?client_id=INTERNAL00000000CODE&redirect_uri=http%3A%2F%2Fdev.iduo.cc%3A6006%2Foidc-callback&response_type=code&scope=email profile roles openid iduo.api&state=5d926c2f2d17427292874683a94623ba&code_challenge=WIFhbkprQuOjfq2rLgpughK_SVWhasf_LlhglcSq4aQ&code_challenge_method=S256&acr_values=idp:WeChatPublic&response_mode=query", requestOptions)
+        .then(response => response.text())
+        .then(result => alert(result))
+        .catch(error => alert(error));

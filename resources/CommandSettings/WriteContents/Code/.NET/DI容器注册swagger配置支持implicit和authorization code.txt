@@ -1,0 +1,25 @@
+services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc(adminApiConfiguration.ApiVersion, new OpenApiInfo { Title = adminApiConfiguration.ApiName, Version = adminApiConfiguration.ApiVersion });
+
+    var openApiOAuthFlow = new OpenApiOAuthFlow
+    {
+        AuthorizationUrl = new Uri($"{adminApiConfiguration.IdentityServerBaseUrl}/connect/authorize"),
+        TokenUrl = new Uri($"{adminApiConfiguration.IdentityServerBaseUrl}/connect/token"),
+        Scopes = new Dictionary<string, string>
+        {
+            { adminApiConfiguration.OidcApiName, adminApiConfiguration.ApiName }
+        }
+    };
+    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.OAuth2,
+        Flows = new OpenApiOAuthFlows
+        {
+            // BOOKMARK: swagger授权配置 支持implicit和authorization code
+            Implicit = openApiOAuthFlow,
+            AuthorizationCode = openApiOAuthFlow
+        }
+    });
+    options.OperationFilter<AuthorizeCheckOperationFilter>();
+});

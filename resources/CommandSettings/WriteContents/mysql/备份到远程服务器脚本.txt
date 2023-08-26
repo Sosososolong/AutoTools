@@ -1,0 +1,33 @@
+#!/bin/bash
+# MySQL服务器地址
+source_host="192.168.1.230"
+# MySQL用户名
+source_user="root"
+# MySQL密码
+source_password="iduo2022"
+# 本地备份地址
+backup_dir="/home/administrator/data/mysqldata"
+
+# 上传服务器地址
+target_host="192.168.1.230"
+# 上传服务器用户名(配置私钥免密登录)
+target_user="root"
+# 上传服务器目录
+target_dir="/home/administrator/data/mysqldata${source_host}"
+
+# 备份数据库列表
+databases=("iduo_ids4" "iduo_engine" "iduo_portal" "iduo_site" "iduo_business")
+
+# 防止目录不存在, 即使目录存在mkdir -p也不会报错
+mkdir -p $backup_dir
+ssh $target_user@$target_host "mkdir -p $target_dir"
+
+# 循环备份每个数据库
+for database_name in "${databases[@]}"
+do
+    # 执行备份
+    mysqldump -h $source_host -u $source_user -p$source_password $database_name > $backup_dir/$database_name.sql
+
+    # 传输备份文件到目标服务器
+    scp $backup_dir/$database_name.sql $target_user@$target_host:$target_dir
+done

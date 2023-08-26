@@ -1,0 +1,1 @@
+random_wait=$((RANDOM % 241 + 60));sleep $random_wait;python D:/others.projects/tools/kakaxi.py -f "D:/others.projects/tools/resources/CommandSettings/OperateKeyboardAndMouse/Auto Punch/title robots punch.txt" >> "D:/others.projects/tools/log.txt"

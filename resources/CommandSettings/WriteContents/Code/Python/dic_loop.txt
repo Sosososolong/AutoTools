@@ -1,0 +1,3 @@
+for key in DICTIONARY.keys():
+        DICTIONARY[key]['多级的key']...
+        print(key)

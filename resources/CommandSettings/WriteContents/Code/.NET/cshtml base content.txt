@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "OAuth2.0 Debug";
+}
+
+
+
+@section Scripts{
+    <script>
+        console.log('start')
+    </script>
+}

@@ -1,0 +1,2 @@
+with open(settings_file, 'r', encoding=ENCODING) as file:
+        data = json.loads(file.read())

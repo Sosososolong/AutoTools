@@ -1,0 +1,1 @@
+server\\s*=\\s*(?<host>[\\w\\d\\.]+);\\s*Port\\s*=\\s*(?<port>\\d+);\\s*userid\\s*=\\s*(?<username>\\w+);\\s*pwd\\s*=\\s*(?<password>.+)

@@ -1,0 +1,7 @@
+import ctypes
+user32 = ctypes.WinDLL('user32')
+h_wnd = user32.FindWindowW(None, WINDOW_TITLE)
+# SW_RESTORE
+user32.ShowWindow(h_wnd, 9)
+# SW_MINIMIZE
+user32.ShowWindow(h_wnd, 6)

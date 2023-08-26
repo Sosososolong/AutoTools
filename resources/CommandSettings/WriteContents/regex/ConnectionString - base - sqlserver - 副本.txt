@@ -1,0 +1,1 @@
+data\\s+source\\s*=(?<host>.+);initial\\s+catalog\\s*=\\s*(?<database>\\w+);user\\s+id=(?<username>\\w+);\\s*password\\s*=\\s*(?<password>.+?);.*

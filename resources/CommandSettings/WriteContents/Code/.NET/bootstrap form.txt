@@ -1,0 +1,26 @@
+<form method="get" action="CodeGen">
+    <label for="connectionString" class="form-label">数据库连接字符串</label>
+    <input type="text" id="connectionString" name="connectionString" class="form-control" aria-describedby="connectionStringHelpBlock">
+    <div id="connectionStringHelpBlock" class="form-text">
+        数据库的连接字符串.
+    </div>
+
+    <label for="tableFullName" class="form-label mt-3">表名</label>
+    <input type="text" id="tableFullName" name="tableFullName" class="form-control" aria-describedby="tableFullNameHelpBlock">
+    <div id="tableFullNameHelpBlock" class="form-text">
+        数据表表名.
+    </div>
+    
+    <label for="tableComment" class="form-label mt-3">表注释</label>
+    <input type="text" id="tableComment" name="tableComment" class="form-control" aria-describedby="tableCommentHelpBlock">
+    <div id="tableCommentHelpBlock" class="form-text">
+        数据表注释, 即中文名.
+    </div>
+    
+    <label for="serviceFieldInController" class="form-label mt-3">业务字段</label>
+    <input type="text" id="serviceFieldInController" name="serviceFieldInController" class="form-control" aria-describedby="serviceFieldInControllerHelpBlock">
+    <div id="serviceFieldInControllerHelpBlock" class="form-text">
+        控制器中管理目标表的业务字段, 可为空, 空表示创建新的服务类.
+    </div>
+    <button class="btn btn-primary mt-3" type="submit">提交</button>
+</form>

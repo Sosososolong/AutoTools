@@ -1,0 +1,2 @@
+var httpContextProcessor = ServiceLocator.Instance.GetService<IHttpContextAccessor>();
+var token = httpContextProcessor.HttpContext.Request.Headers["Authorization"].FirstOrDefault()?.Replace("Bearer ", "");

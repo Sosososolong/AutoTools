@@ -1,0 +1,2 @@
+# python ./start.py xiaoming
+args = sys.argv # ['start.py', 'xiaoming']

@@ -1,0 +1,2 @@
+if 'name' in DICTIONARY:
+    print('exist')

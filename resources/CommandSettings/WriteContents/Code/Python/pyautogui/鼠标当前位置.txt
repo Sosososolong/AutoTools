@@ -1,0 +1,1 @@
+current_x, current_y = pyautogui.position()

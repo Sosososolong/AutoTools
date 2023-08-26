@@ -1,0 +1,2 @@
+// 注入IHttpContextAccessor httpContextAccessor -> _httpContextAccessor
+_httpContextAccessor.HttpContext.User

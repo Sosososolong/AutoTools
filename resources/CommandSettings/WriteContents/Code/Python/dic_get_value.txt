@@ -1,0 +1,5 @@
+# 'name'不存在则报错
+DICTIONARY['name']
+
+# 'name'不存在则返回None
+DICTIONARY.get('name')

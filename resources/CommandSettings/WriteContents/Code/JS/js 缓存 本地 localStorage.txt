@@ -1,0 +1,3 @@
+localStorage.setItem('key', 'value');
+let value = localStorage.getItem('key');
+localStorage.removeItem('key');

@@ -1,0 +1,1 @@
+data\\s+source\\s*=\\s*(?<host>[\\d\\w\\.]+):(?<port>\\d+)/(?<instance>\\w+);\\s*user\\s+id=(?<database>\\w+);password\\s*=\\s*(?<password>.+?);.+Min\\s+Pool\\s+Size\\s*=\\s*\\d+;.*

@@ -1,0 +1,1 @@
+server\\s*=\\s*(?<host>.+);port\\s*=\\s*(?<port>\\d+);.*database\\s*=\\s*(?<database>\\w+);uid\\s*=\\s*(?<username>\\w+);pwd=(?<password>.+?);.*

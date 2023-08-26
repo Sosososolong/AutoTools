@@ -1,0 +1,1 @@
+parts = [part for part in cmd.split(" ") if part.strip()]

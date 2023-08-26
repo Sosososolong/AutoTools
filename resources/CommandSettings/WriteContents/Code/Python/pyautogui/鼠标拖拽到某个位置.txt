@@ -1,0 +1,1 @@
+pyautogui.dragTo(position_x, position_y)

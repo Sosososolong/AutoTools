@@ -1,0 +1,48 @@
+# 钉钉自动打卡
+
+# 先移动到图标上
+moveTo >>> img >>> qtscrcpy.png
+do
+    click
+while img_show qtscrcpy_title.png max_loop_count 10 frequency 1 action moveTo
+
+# 就可以省略此步骤了
+#moveTo >>> img >>> qtscrcpy_title.png
+
+moveRel >>> position >>> 149 >>> 171
+
+# 最多循环10次, 每次执行"click2"后, 等待1s中, 查看图片multi_ctrl_icon.png是否出现; 出现则说明操作成功打断循环终止操作
+#click2 [loop:10:1:multi_ctrl_icon.png]
+do
+    click2
+while img_show multi_ctrl_icon.png max_loop_count 10 frequency 1
+
+# 鼠标移动到multi_ctrl_icon.png
+moveTo >>> img >>> multi_ctrl_icon.png
+moveRel >>> position >>> -100 >>> 857
+dragRel >>> position >>> 0 >>> -660
+
+press >>> ` >>> f5
+sleep >>> 3
+
+# 返回主界面键 位于multi_ctrl_icon.png y轴正方向496, 所以先x周正方向便宜100(对应-100), y周再偏移299(+857 - 660 + x = 496; x = 299)
+moveRel >>> position >>> 100 >>> 299
+click2
+click2
+click2
+
+# 鼠标移动到屏幕准备翻页
+moveRel >>> position >>> -100 >>> 0
+# 不断翻页直到找到钉钉(不知道第几页, 同时翻页有可能失败)
+do
+    dragRel >>> position >>> -300 >>> 0
+    moveRel >>> position >>> 300 >>> 0
+while img_show dingtalk.png max_loop_count 10 frequency 1 action click
+
+
+
+
+#click  1 1 1 
+#click D:/others.projects/tools/pyautogui/kakaxi.png   1 1 1
+#hotkey   ctrl   f  1 1 1
+#input   python  1 1 1
