@@ -1,0 +1,1 @@
+Data Source=127.0.0.1,1433;Initial Catalog=business;User ID=sa;Password=123456;MultipleActiveResultSets=true;Encrypt=True;TrustServerCertificate=True;

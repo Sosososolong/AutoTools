@@ -1,0 +1,1 @@
+docker run  -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Iduo@2022" -p 1433:1433  --memory 4000M -v /home/administrator/data/mssql:/var/opt/mssql/data --name sqlserver -d mcr.microsoft.com/mssql/server:2017-latest

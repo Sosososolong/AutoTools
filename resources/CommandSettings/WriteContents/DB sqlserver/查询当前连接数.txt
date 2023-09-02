@@ -1,0 +1,1 @@
+select loginame,count(1) as Nums from sys.sysprocesses group by loginame order by 2 desc;

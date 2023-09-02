@@ -1,0 +1,10 @@
+-- 最大连接数
+SHOW VARIABLES LIKE 'max_connections'
+
+-- 当前数据库的连接数
+SHOW STATUS LIKE 'Threads_connected';
+
+-- 当前连接数据库的线程详细信息
+SHOW PROCESSLIST
+SELECT user, host, time, command, time FROM information_schema.processlist WHERE db = 'iduo_business';
+SELECT db, COUNT(*) FROM information_schema.processlist GROUP BY db

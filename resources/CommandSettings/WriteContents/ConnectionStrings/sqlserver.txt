@@ -1,1 +1,0 @@
-Data Source=whitebox.com;Initial Catalog=business;User ID=sa;Password=123456;

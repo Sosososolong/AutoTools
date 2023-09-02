@@ -1,0 +1,1 @@
+select * from master.dbo.sysconfigures where [config] in(103, 503, 16384);

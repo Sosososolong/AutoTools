@@ -196,7 +196,8 @@ class Kakaxi(object):
         # 将内容添加到剪贴板再粘贴
         self.main_window.clipboard_clear()
         self.main_window.clipboard_append(text.rstrip()) # 去除末尾的换行, 避免命令行直接执行
-        pyautogui.hotkey('shift', 'insert')
+        # pyautogui.hotkey('shift', 'insert')
+        pyautogui.hotkey('ctrl', 'v')
 
     
     def operate_keyboard_and_mouse(self, script_file, script_content=None):
